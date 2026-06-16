@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Name | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:#e2e8f0;
+    line-height:1.6;
+}
+
+
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#38bdf8;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#e2e8f0;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 20px 60px;
+}
+
+.hero-container{
+    max-width:1200px;
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:50px;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero-text h1 span{
+    color:#38bdf8;
+}
+
+.hero-text h2{
+    font-size:28px;
+    color:#94a3b8;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.btn-secondary:hover{
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+.hero-image{
+    text-align:center;
+}
+
+.hero-image img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 40px rgba(56,189,248,0.3);
+}
+
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#38bdf8;
+}
+
+
+
+.about-content{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    color:#cbd5e1;
+}
+
+
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+    background:#334155;
+}
+
+
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#1e293b;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+}
+
+.project-content p{
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
+
+
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin-bottom:15px;
+}
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+
+
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#94a3b8;
+}
+
+
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero-text{
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:40px;
+    }
+
+    .hero-text h2{
+        font-size:22px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .hero-image img{
+        width:250px;
+        height:250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Portfolio</div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-container">
+
+        <div class="hero-text">
+            <h1>Hi, I'm <span>Sudip Shrestha</span></h1>
+
+            <h2>BSc CSIT Student & Web Developer</h2>
+
+            <p>
+                I create responsive websites and modern web applications.
+                Passionate about web development, UI design, and technology.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8jcyar_oiYk_1z0LJpLTu6IpJdiADH8QayAd2StZVOukBpSApgS5JR9fF8z9FWWiT4ALjLlI7aRROoodZrFBGFnF_UHZA1AFucjBJ9TEBJlhFUUgy54j0GMkNT62rgHo7Ppaa_Gjo3RHc5dKcSeNY4kPxmMYmekujhsj9wZQi3QqSgfPMdnVgaXwg5OU/s718/1000026380.jpg" alt="Profile Image">
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+            <p>
+                I am a BSc CSIT student with an interest in web development,
+                programming, and creating user-friendly digital experiences.
+                I enjoy learning new technologies and building practical projects
+                that solve real-world problems.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>HTML5</h3>
+            </div>
+
+            <div class="skill-card">
+                <h3>CSS3</h3>
+            </div>
+
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="skill-card">
+                <h3>Python</h3>
+            </div>
+
+            <div class="skill-card">
+                <h3>C Programming</h3>
+            </div>
+
+            <div class="skill-card">
+                <h3>Responsive Design</h3>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="https://picsum.photos/500/300?1" alt="Project">
+
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+
+                    <p>
+                        A modern personal portfolio website built with HTML and CSS.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://picsum.photos/500/300?2" alt="Project">
+
+                <div class="project-content">
+                    <h3>Student Management System</h3>
+
+                    <p>
+                        A system for managing student records and academic data.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://picsum.photos/500/300?3" alt="Project">
+
+                <div class="project-content">
+                    <h3>E-Commerce Website</h3>
+
+                    <p>
+                        An online shopping platform with responsive design.
+                    </p>
+
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container contact">
+
+        <h2 class="section-title">Contact</h2>
+
+        <p>Email: sudipstha0011@gmail.com</p>
+
+        <p>Phone: +977 9848758460</p>
+
+        <p>
+            LinkedIn:
+            <a href="#">https://www.linkedin.com/in/sudip-shrestha-6b560b319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app</a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="#">https://github.com/sudipshrestha-beep</a>
+        </p>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Your Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
